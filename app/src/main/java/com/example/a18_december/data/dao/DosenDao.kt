@@ -9,4 +9,5 @@ import com.example.a18_december.data.entity.Dosen
 @Dao
 interface DosenDao {
     @Query("select * from dosen ORDER BY nama ASC")
+    fun getAllMahasiswa(): Flow<List<Dosen>>
 }
