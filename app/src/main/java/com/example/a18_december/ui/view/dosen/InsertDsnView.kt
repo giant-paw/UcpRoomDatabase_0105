@@ -1,5 +1,6 @@
 package com.example.a18_december.ui.view.dosen
 
+import android.annotation.SuppressLint
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -38,8 +39,8 @@ import kotlinx.coroutines.launch
 object DestinasiInsertDosen : AlamatNavigasi {
     override val route: String = "insert_dsn"
 }
-//
-//@SuppressLint("RememberReturnType", "UnusedMaterial3ScaffoldPaddingParameter")
+
+@SuppressLint("RememberReturnType", "UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
 fun InsertDsnView(
     onBack: () -> Unit,
@@ -52,7 +53,7 @@ fun InsertDsnView(
     val coroutineScope = rememberCoroutineScope()
 
     // Observasi Perubahan SnackBar effect
-    LaunchedEffect(uiState.snackBarMessage) {
+    LaunchedEffect(uiState.dosenEvent) {
         uiState.snackBarMessage?.let { message ->
             coroutineScope.launch {
                 snackbarHostState.showSnackbar(message)     // Tampilkan Snackbar
@@ -171,7 +172,7 @@ fun FormDosen(
 
         Spacer(modifier = Modifier.height(16.dp))
 
-        // KELAS
+        // Jenis Kelamin
 
         Text(text = "Jenis Kelamin")
         Row (

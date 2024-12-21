@@ -2,7 +2,7 @@ package com.example.a18_december.repository
 
 import com.example.a18_december.data.dao.DosenDao
 import com.example.a18_december.data.entity.Dosen
-import java.util.concurrent.Flow
+import kotlinx.coroutines.flow.Flow
 
 class LocalRepositoryDsn(
     private val dosenDao: DosenDao
@@ -12,11 +12,11 @@ class LocalRepositoryDsn(
         dosenDao.insertDsn(dosen)
     }
 
-    override fun getAllDosen(): kotlinx.coroutines.flow.Flow<List<Dosen>> {
+    override fun getAllDosen(): Flow<List<Dosen>> {
         return dosenDao.getAllDosen()
     }
 
-    override fun getDsn(nidn: String): kotlinx.coroutines.flow.Flow<Dosen> {
+    override fun getDsn(nidn: String): Flow<Dosen> {
         return dosenDao.getDosen(nidn)
     }
 

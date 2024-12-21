@@ -7,9 +7,4 @@ interface AlamatNavigasi {
         override val route = "home"
     }
 
-    object DestinasiDetailDosen : AlamatNavigasi{
-        override val route = "detail"
-        const val NIDN = "nidn"
-        val routeWithArg = "$route/{$NIDN}"
-    }
 }

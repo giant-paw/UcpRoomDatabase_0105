@@ -9,8 +9,6 @@ import androidx.lifecycle.viewModelScope
 import com.example.a18_december.repository.RepositoryDsn
 import kotlinx.coroutines.launch
 
-var uiState by mutableStateOf(DsnUIState())
-
 class DosenViewModel (private val repositoryDsn: RepositoryDsn) : ViewModel() {
 
     var uiState by mutableStateOf(DsnUIState())

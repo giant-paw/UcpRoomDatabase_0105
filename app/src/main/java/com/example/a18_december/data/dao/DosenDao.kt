@@ -12,9 +12,9 @@ interface DosenDao {
     @Query("select * from dosen ORDER BY nama ASC")
     fun getAllDosen(): Flow<List<Dosen>>
 
-    @Insert
-    suspend fun insertDsn(dosen: Dosen)
-
     @Query("SELECT * FROM dosen where nidn = :nidn")
     fun getDosen(nidn: String): Flow<Dosen>
+
+    @Insert
+    suspend fun insertDsn(dosen: Dosen)
 }

@@ -116,7 +116,7 @@ fun BodyHomeDsnView(
                 contentAlignment = Alignment.Center
             ) {
                 Text(
-                    text = "Tidak ada data Dosen.",
+                    text = "Data Dosen Kosong.",
                     fontSize = 18.sp,
                     fontWeight = FontWeight.Bold,
                     modifier = Modifier.padding(16.dp)
