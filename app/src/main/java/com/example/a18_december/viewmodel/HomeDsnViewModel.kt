@@ -45,7 +45,6 @@ class HomeDsnViewModel(
             initialValue = HomeUiState(
                 isLoading = true
             )
-
         )
 }
 
