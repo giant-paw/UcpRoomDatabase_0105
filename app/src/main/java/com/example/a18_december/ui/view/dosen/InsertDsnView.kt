@@ -1,6 +1,5 @@
-package com.example.a18_december.view.dosen
+package com.example.a18_december.ui.view.dosen
 
-import android.annotation.SuppressLint
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -27,22 +26,20 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.example.a18_december.data.entity.Dosen
 import com.example.a18_december.ui.customwidget.CustomTopAppBar
 import com.example.a18_december.ui.navigation.AlamatNavigasi
-import com.example.a18_december.viewmodel.DosenEvent
-import com.example.a18_december.viewmodel.DosenViewModel
-import com.example.a18_december.viewmodel.DsnUIState
-import com.example.a18_december.viewmodel.FormErrorState
-import com.example.a18_december.viewmodel.PenyediaViewModel
+import com.example.a18_december.ui.viewmodel.DosenEvent
+import com.example.a18_december.ui.viewmodel.DosenViewModel
+import com.example.a18_december.ui.viewmodel.DsnUIState
+import com.example.a18_december.ui.viewmodel.FormErrorState
+import com.example.a18_december.ui.viewmodel.PenyediaViewModel
 import kotlinx.coroutines.launch
 
-object DestinasiInsert : AlamatNavigasi {
-    override val route: String = "insert_mhs"
+object DestinasiInsertDosen : AlamatNavigasi {
+    override val route: String = "insert_dsn"
 }
-
-
-@SuppressLint("RememberReturnType", "UnusedMaterial3ScaffoldPaddingParameter")
+//
+//@SuppressLint("RememberReturnType", "UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
 fun InsertDsnView(
     onBack: () -> Unit,
@@ -126,7 +123,7 @@ fun InsertBodyDsn(
 
 @Composable
 fun FormDosen(
-    dosenEvent: DosenEvent= DosenEvent(),
+    dosenEvent: DosenEvent = DosenEvent(),
     onValueChange: (DosenEvent) -> Unit,
     errorState: FormErrorState = FormErrorState(),
     modifier: Modifier = Modifier

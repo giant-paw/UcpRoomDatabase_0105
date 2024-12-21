@@ -3,14 +3,12 @@ package com.example.a18_december.ui.navigation
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
-import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import androidx.navigation.navArgument
-import com.example.a18_december.view.dosen.DestinasiInsert
-import com.example.a18_december.view.dosen.HomeDsnView
-import com.example.a18_december.view.dosen.InsertDsnView
+import com.example.a18_december.ui.view.dosen.DestinasiInsertDosen
+import com.example.a18_december.ui.view.dosen.HomeDsnView
+import com.example.a18_december.ui.view.dosen.InsertDsnView
 
 @Composable
 fun PengelolaHalaman(
@@ -19,20 +17,20 @@ fun PengelolaHalaman(
 ){
     NavHost(
         navController = navController,
-        startDestination = AlamatNavigasi.DestinasiHome.route) {
+        startDestination = AlamatNavigasi.DestinasiHomeDosen.route) {
         composable(
-            route = AlamatNavigasi.DestinasiHome.route
+            route = AlamatNavigasi.DestinasiHomeDosen.route
         ){
             HomeDsnView(
                 onAddDsn = {
-                    navController.navigate(DestinasiInsert.route)
+                    navController.navigate(DestinasiInsertDosen.route)
                 },
                 modifier = modifier
             )
         }
 
         composable(
-            route = DestinasiInsert.route
+            route = DestinasiInsertDosen.route
         ){
             InsertDsnView(
                 onBack = {

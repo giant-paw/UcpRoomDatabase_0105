@@ -1,4 +1,4 @@
-package com.example.a18_december.viewmodel
+package com.example.a18_december.ui.viewmodel
 
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf

@@ -1,4 +1,4 @@
-package com.example.a18_december.view.dosen
+package com.example.a18_december.ui.view.dosen
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -37,9 +37,9 @@ import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.a18_december.data.entity.Dosen
 import com.example.a18_december.ui.customwidget.CustomTopAppBar
-import com.example.a18_december.viewmodel.HomeDsnViewModel
-import com.example.a18_december.viewmodel.HomeUiState
-import com.example.a18_december.viewmodel.PenyediaViewModel
+import com.example.a18_december.ui.viewmodel.HomeDsnViewModel
+import com.example.a18_december.ui.viewmodel.HomeUiState
+import com.example.a18_december.ui.viewmodel.PenyediaViewModel
 import kotlinx.coroutines.launch
 
 @Composable
@@ -54,7 +54,7 @@ fun HomeDsnView(
             CustomTopAppBar(
                 onBack = { },
                 showBackButton = false,
-                judul = "Daftar Dosen"
+                judul = "Daftar Dosen UMY"
             )
         },
         floatingActionButton = {
@@ -70,8 +70,7 @@ fun HomeDsnView(
             }
         }
     ) {
-            innerPadding ->
-        val homeUiState by viewModel.HomeUiState.collectAsState()
+        innerPadding -> val homeUiState by viewModel.HomeUiState.collectAsState()
 
         BodyHomeDsnView(
             homeUiState = homeUiState,
